@@ -6,6 +6,13 @@ class WelcomeController < ApplicationController
   end
 
   def about
+<<<<<<< HEAD
+    @color = params[:color]
+  end
+
+  def contact
+=======
   	@color = params[:color ]
+>>>>>>> upstream/working
   end
 end
