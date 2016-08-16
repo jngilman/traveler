@@ -1,8 +1,10 @@
 <h1>A Premier Travel Website </h1>
 <p>We will help you find your ultimate destination.</p>
 <p>Our favorite color of the day is <%= @color %></p>
+
 <style>
-	body {
-		background: <%= @color %>;
-	}
+body {
+  background: <%= @color %>;
+}
 </style>
+<%= link_to 'blue', about_path(color: '#9dc6d8' ), class: 'btn btn-default'%>
