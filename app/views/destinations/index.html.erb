@@ -3,6 +3,11 @@
     <%= notice %>
   </p>
 <% end %>
+<div class="nav nav-pills" role="presentation">
+  <% @my_countries.each do |c| %>
+    <li><%= link_to c.country, destinations_path(country: c.country) %></li>
+  <% end %>
+</div>
 <h1>Listing Destinations</h1>
 <div class="row">
   <% @destinations.each do |destination| %>
