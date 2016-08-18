@@ -11,19 +11,21 @@
 <h1>Listing Destinations</h1>
 <div class="row">
   <% @destinations.each do |destination| %>
-    <div class="col-md-4">
-      <div class="well">
-        <p><%= destination.city %></p>
-        <p><%= destination.country %></p>
-        <p><%= destination.population %></p>
-        <p><%= destination.description %></p>
-        <p>
-          <%= link_to 'Show', destination, class: 'btn btn-default' %>
-          <%= link_to 'Edit', edit_destination_path(destination), class: 'btn btn-default' %>
-          <%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' %>
-        </p>
-      </div>
+  <div class="col-md-4">
+    <div class="well">
+      <strong><i><%= "#{destination.city}" %></i>, <%= "#{destination.country}" %></strong>
+      <p>population<%= destination.population %></p>
+      <% if destination.avatar_file_name != nil %>
+        <center><p><%= image_tag destination.avatar.url(:medium), class: "img-responsive" %></p></center>
+      <% end %>
+      <p><%= destination.description %></p>
+      <p>
+        <td><%= link_to 'Show', destination, class: "btn btn-default" %></td>
+        <td><%= link_to 'Edit', edit_destination_path(destination), class: "btn btn-default" %></td>
+        <td><%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
+      </p>
     </div>
+  </div>
   <% end %>
 </div>
 
