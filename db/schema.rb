@@ -17,6 +17,13 @@ ActiveRecord::Schema.define(version: 20160817135147) do
     t.string   "city"
     t.string   "country"
     t.text     "description"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.float    "population"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.float    "population"
